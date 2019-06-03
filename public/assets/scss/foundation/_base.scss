@@ -1,0 +1,86 @@
+/*========================================
+設定
+========================================*/
+
+$breakpoints:('sm': 'screen and (max-width: 414px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-widh: 1200px)'
+) !default;
+
+
+//mixin
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//メインカラー　サブカラー
+$font-color_default: #333333;
+$font-color-white: white;
+$font-color-content: #7B68EE;
+$font-color-text: #666666;
+
+
+$background-color-header: #444;
+
+//site-width
+//フォントサイズ 大中小 デフォルト
+//大 l xl xxl 3l
+$site-width : 980px;
+$font-size_default: 16px;
+$font-size-s:14px;
+$font-size-m:18px;
+$font-size-l:20px;
+$font-size-xl:24px;
+$font-size-xxl:28px;
+$font-size-3l:38px;
+$font-size-4l: 45px;
+$font-size-5l: 55px;
+
+//スペース　大中小 marginやpaddingに使う
+//大 l xl xxl 3l
+$space-s:5px;
+$space-m:10px;
+$space-l:15px;
+$space-xl:20px;
+$space-xxl:30px;
+$space-3l:40px;
+$space-4l: 60px;
+
+$font-family_top: 'Oswald',
+sans-serif;
+$font-family_sidebar: 'PT Sans Narrow',
+sans-serif;
+
+// $font-family_retrip: 'Hiragino Kaku Gothic Pro',
+// 'ヒラギノ角ゴ Pro W3',
+// メイリオ,
+// Meiryo,
+// 'ＭＳ Ｐゴシック',
+// sans-serif;
+
+
+
+
+
+/*========================================
+base   デフォルト設定
+========================================*/
+html,
+body {
+    width: 100%;
+    font-size: $font-size_default;
+    line-height: 1.6;
+    //モバイル端末で使われる拡大アルゴリズム
+    text-size-adjust: 100%;
+    //文字の間隔
+    letter-spacing: 0.1em;
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; // TODO:リファクタ必要（変数にする）
+}
+
+.item {
+    text-decoration: none;
+    color: black;
+}
