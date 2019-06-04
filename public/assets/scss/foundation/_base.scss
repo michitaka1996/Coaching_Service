@@ -20,10 +20,10 @@ $breakpoints:('sm': 'screen and (max-width: 414px)',
 $font-color_default: #333333;
 $font-color-white: white;
 $font-color-content: #7B68EE;
-$font-color-text: #666666;
+$font-color-text: #757575;
 
 
-$background-color-header: #444;
+$background-color-header:#333333;
 
 //site-width
 //フォントサイズ 大中小 デフォルト
@@ -49,10 +49,7 @@ $space-xxl:30px;
 $space-3l:40px;
 $space-4l: 60px;
 
-$font-family_top: 'Oswald',
-sans-serif;
-$font-family_sidebar: 'PT Sans Narrow',
-sans-serif;
+$font-family_header: 'Source Sans Pro', sans-serif;
 
 // $font-family_retrip: 'Hiragino Kaku Gothic Pro',
 // 'ヒラギノ角ゴ Pro W3',
