@@ -5,5 +5,6 @@
 </html>
 <body>
     <?= $header ?>
-   
+    <?= $contents ?>
+    <?= $footer ?>
 </body>

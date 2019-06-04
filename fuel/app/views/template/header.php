@@ -11,7 +11,9 @@
      </nav>
      <nav id="header__right">
          <ul>
+             <!--ログイン -->
              <li><a class="menu__list" href="">Sign in</a></li>
+             <!-- 会員登録 -->
              <li><a class="menu__list" href="">Sign up</a></li>
          </ul>
      </nav>

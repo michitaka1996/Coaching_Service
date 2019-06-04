@@ -1,0 +1,12 @@
+.c-topMenu{
+    height: 80px;
+    &__menu{
+        overflow: hidden;
+        li{
+            float: left;
+            a{
+                margin: 0 15px;
+            }
+        }
+    }
+}
