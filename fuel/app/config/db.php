@@ -6,25 +6,26 @@
  */
 
 return array(
-    'pdo' => array(
-        'type'           => 'pdo',
-        'connection'     => array(
-            'dsn'        => 'mysql:host=localhost;dbname=Athle',
-            'username'       => 'root',
-            'password'       => 'root',
-            'persistent'     => false,
-            'compress'       => false,
-        ),
-        'table_prefix' => '',
-        'charset'      => 'utf8',
-        'caching'      => false,
-        'profiling'    => true,
-    ),
+     'active' => 'mysqli',
+    // 'pdo' => array(
+    //     'type'           => 'pdo',
+    //     'connection'     => array(
+    //         'dsn'        => 'mysql:host=localhost;dbname=Athle',
+    //         'username'       => 'root',
+    //         'password'       => 'root',
+    //         'persistent'     => false,
+    //         'compress'       => false,
+    //     ),
+    //     'table_prefix' => '',
+    //     'charset'      => 'utf8',
+    //     'caching'      => false,
+    //     'profiling'    => true,
+    // ),
     'mysqli' => array(
         'type'           => 'mysqli',
         'connection'     => array(
             'hostname' => 'localhost',
-            'database' => 'fuelUser',
+            'database' => 'Athle',
             'username'       => 'root',
             'password'       => 'root',
             'persistent'     => false,
