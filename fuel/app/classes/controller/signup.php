@@ -52,8 +52,6 @@ class Controller_Signup extends Controller
 
 
 
-
-
         //Inputクラスは静的メンバ
         if (Input::method() === 'POST') {
             Log::debug('POST送信がありました');
@@ -70,20 +68,17 @@ class Controller_Signup extends Controller
                 if ($auth->create_user($formData['username'], $formData['password'], $formData['email'])) {
                     //ログイン成功時
                     Log::debug('ログイン成功しました');
-                    Session::set_flash('sucMsg', 'ユーザー登録が完了しました！');
                     Response::redirect('members/mypage');
                 } else {
                     //ログイン失敗時
                     Log::debug('ログイン失敗しました');
                     $error = $val->error();
-                    Session::set_flash('errMsg', 'ユーザー登録に失敗しました！時間を置いてお試し下さい！');
                 }
                 $form->repopulate();
             } else if (!($val->run())) {
                 Log::debug('なんらかの要因によりバリデーション失敗しました');
                 $error = $val->error();
                 Log::debug('エラー内容' . print_r($error, true));
-                Session::set_flash('errMsg', 'ユーザー登録に失敗しました！時間を置いてお試し下さい！');
             }
         }
 
