@@ -3,6 +3,7 @@ use Fuel\Core\Controller;
 use Fuel\Core\Fieldset;
 use Fuel\Core\Log;
 use Fuel\Core\Response;
+use Fuel\Core\Session;
 
 //やる処理 バリデーションして　ビューに処理を渡す
 class Controller_Signup extends Controller
@@ -15,6 +16,7 @@ class Controller_Signup extends Controller
         Log::debug('サインアップ画面');
         $error = '';
         $formData = '';
+        
         //fieldSetで自動的に書いてくれる
         //form全体をオブジェクトとして扱うことのできるクラス
         //引数は一意　名前をつけることができる
@@ -68,6 +70,10 @@ class Controller_Signup extends Controller
                 if ($auth->create_user($formData['username'], $formData['password'], $formData['email'])) {
                     //ログイン成功時
                     Log::debug('ログイン成功しました');
+                    // Log::debug('セッション変数に格納します');
+                    // Session::set('user_id', 'true');
+                    // $user_id = Session::get('user_id');
+                    // Log::debug('セッションの有無:'.print_r($user_id, true));
                     Response::redirect('members/mypage');
                 } else {
                     //ログイン失敗時
@@ -92,7 +98,7 @@ class Controller_Signup extends Controller
         $view->set('contents', View::forge('auth/signup'));
         $view->set('footer', View::forge('template/footer'));
         $view->set_global('signupform', $form->build(''), false); //falseはデフォルト値
-
+        // $view->set_global('user_id', $user_id->build(''), false);
         return $view;
     }
 }

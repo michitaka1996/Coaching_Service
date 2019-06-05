@@ -10,8 +10,3 @@
         <li><a href="">Basketball</a></li>
     </ul>
 </section>
-
-
-<section class="c-topContents">
-    
-</section>

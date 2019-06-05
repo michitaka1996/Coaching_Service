@@ -1,14 +1,16 @@
 <?php
-use Fuel\Core\Controller;
+use Fuel\Core\View;
 
-class Controller_Members_Mypage extends  Controller_Members {
-    public function action_index(){
-        
-        Log::debug('マイページです');
+class Controller_NoneLogin extends Controller
+{
+
+    public function action_index()
+    {
+        Log::debug('ログインしてくださいページです');
         $view = View::forge('template/index');
         $view->set('head', View::forge('template/head'));
         $view->set('header', View::forge('template/header'));
-        $view->set('contents', View::forge('members/mypage'));
+        $view->set('contents', View::forge('auth/noneLogin'));
         $view->set('footer', View::forge('template/footer'));
 
         return $view;
