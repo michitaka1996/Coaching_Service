@@ -1,3 +1,3 @@
-<div class="c-main">
+<div class="p-main">
     fsaf
 </div>

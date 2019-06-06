@@ -22,3 +22,5 @@ class Controller_Members extends Controller
         }
     }
 }
+
+//デフォルトのテンプレートコントローラ

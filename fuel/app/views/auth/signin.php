@@ -1,6 +1,6 @@
-<div class="c-main">
-    <section class="c-signin__form">
-        <div class="c-form">
+<div class="p-main">
+    <section class="p-signin__form">
+        <div class="p-form">
 
             
             <?= $signinform ?>
